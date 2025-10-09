@@ -1,0 +1,766 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "8171f284",
+   "metadata": {},
+   "source": [
+    "# ðŸ’» Ãœbungsblatt 1 â€“ Einstieg in Python & Jupyter\n",
+    "**Ziel:** Jupyter Notebook kennenlernen, erste Python-Befehle ausfÃ¼hren, visuelle Ergebnisse sehen\n",
+    "\n",
+    "**Hinweis:** Die einzelnen Punkte werden im Verlauf der Vorlesung noch detaillierter betrachtet werden.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0128ed24",
+   "metadata": {},
+   "source": [
+    "## Jupyter Notebooks\n",
+    "\n",
+    "Ein Jupyter Notebook ist ein \"digitales Notizbuch\", das unterteilt in sogenannte Zellen formatierten Text (\"Markdown\") und Python-Code (aber auch andere Sprache, daher **JU**lia, **PYT**hon, und **R**) zulÃ¤sst.\n",
+    "\n",
+    "Code-Zellen kÃ¶nnen mittels des im Hintergrund laufenden Rechenkerns direkt (mit SHIFT + ENTER) aus dem Notebook heraus ausgefÃ¼hrt werden."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9af6b2d7",
+   "metadata": {},
+   "source": [
+    "### Zellen ausprobieren\n",
+    "1. FÃ¼ge **eine Code-Zelle** und **eine Text-Zelle (Markdown)** hinzu.\n",
+    "2. Schreibe in die Textzelle:\n",
+    "```\n",
+    "## Mein erstes Notebook\n",
+    "Dies ist ein Text in **Markdown**!\n",
+    "```\n",
+    "3. FÃ¼hre beide Zellen aus und experimentiere mit Ãœberschriften und Emojis ðŸŽ‰."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c58cc849",
+   "metadata": {},
+   "source": [
+    "## Rechnen mit Python\n",
+    "### Ganzen Zahlen\n",
+    "\n",
+    "Mi `+` berechnen wir die Summe zweier ganzer Zahlen"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "fb7239e1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "5 + 17"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7c841517",
+   "metadata": {},
+   "source": [
+    "Werte kÃ¶nnen auch in Variablen gespeichert werden (wie wir in der Vorlesung sehen werden, ist es etwas komplizierter, aber erstmal reicht und diese Information)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "19c47082",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = 5\n",
+    "b = 17\n",
+    "a + b"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "58886449",
+   "metadata": {},
+   "source": [
+    "Mit `type` kÃ¶nnen wir uns den Typ einer Variablen ausgeben lassen."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "03807c00",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = 5\n",
+    "b = 17\n",
+    "a + b\n",
+    "type(a)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0445d04e",
+   "metadata": {},
+   "source": [
+    "Wie wir im Beispiel darÃ¼ber sehen, wird immer nur die letzte RÃ¼ckgabe ausgegeben. Wenn wir zusÃ¤tzliche Ausgaben benÃ¶tigen, kÃ¶nnen wir dafÃ¼r `print` verwenden."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "aa9f93cb",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = 5\n",
+    "b = 17\n",
+    "print(a + b)\n",
+    "type(a)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a6d39a62",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Mit `*` erfolgt die Multiplikation"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "34120309",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a*b"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e33c69ec",
+   "metadata": {},
+   "source": [
+    "und mit `/` kÃ¶nnen wir dividieren"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0b9acd21",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(a/b)\n",
+    "type(a/b)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "17934f6a",
+   "metadata": {},
+   "source": [
+    "Potenzen lassen sich mit `**` (und nicht mit `^`) berechnen."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "688d18f5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a**2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "432e22d6",
+   "metadata": {},
+   "source": [
+    "Wir kÃ¶nnen auch Ergebnisse von Python mit `==` prÃ¼fen lassen"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a4b593bf",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a**3 == 100"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6fa9944e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a**3 == 125 "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b063fcc8",
+   "metadata": {},
+   "source": [
+    "### Rationale Zahlen\n",
+    "\n",
+    "Rationale Zahlen werden hÃ¤ufig durch Floats reprÃ¤sentiert."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "eef52b8e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "r = 5/4\n",
+    "s = 3/7\n",
+    "type(r)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b563d438",
+   "metadata": {},
+   "source": [
+    "Mit Floats kÃ¶nnen wir ebenfalls rechnen:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d339e583",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(r)\n",
+    "print(s)\n",
+    "print(r+s)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b388c616",
+   "metadata": {},
+   "source": [
+    "Beim letzten Schritt ist auf der letzten Stelle etwas MerkwÃ¼rdiges passiert. Haben Sie eine Idee, was passiert sein kÃ¶nnte?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "92a91170",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(\"r*s = \",r*s)\n",
+    "print(\"r^(1/3) = \",r**(1/3))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "50d6dd44",
+   "metadata": {},
+   "source": [
+    "<b> Aufgabe:</b> Erstellen Sie unterhalb eine neue Code Zelle und fÃ¼hren Sie gemischte Operationen (+, -, *, /) aus. Achten Sie dabei auch auf die Klammersetzung \"( )\" und untersuchen Sie die Unterschiede in den Ergebnissen."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a81992bd",
+   "metadata": {},
+   "source": [
+    "## Zeichenketten"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cb554c84",
+   "metadata": {},
+   "source": [
+    "In Python werden Zeichenketten mit `\"` kenntlich gemacht"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e1e01f68",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "s = \"Zeichentte\"\n",
+    "print(s)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "72e8a0bc",
+   "metadata": {},
+   "source": [
+    "Erzeuge einfache Muster, Ã¤ndere Zeichen und Anzahl der Zeilen."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3d577a09",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(\"*\")\n",
+    "print(\"**\")\n",
+    "print(\"***\")\n",
+    "print(\"****\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a4b4e7ec",
+   "metadata": {},
+   "source": [
+    "FÃ¼ge eigene Emojis hinzu. Warum kann Python das darstellen?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "10c20bad",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(\"ðŸŽ¨ ðŸ’» ðŸ ðŸ”¢ ðŸš€\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "52241c5a",
+   "metadata": {},
+   "source": [
+    "## Kommentare und Funktionen\n",
+    "\n",
+    "Ein Kommentar beginnt mit `#`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "960b5253",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Ein Kommentar.\n",
+    "# Code-Zeilen kÃ¶nnen mittels Str+K+C auskommentiert und mittels Str+K+U wieder unkommentiert werden "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "40ebc687",
+   "metadata": {},
+   "source": [
+    "Mit Funktionen kÃ¶nnen wir hÃ¤ufiger verwendete Verarbeitungen kapseln. Beispielsweise eine Funktion die den Betrag einer Zahl berechnet:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "552b48a2",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def Betrag(x): # Betrag berechnet den Betrag des Eingabewertes und dgibt diesen zurÃ¼ck\n",
+    "    if x<0:\n",
+    "        return -x\n",
+    "    else:\n",
+    "        return x"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "60fcaeff",
+   "metadata": {},
+   "source": [
+    "Im Beispiel oben ist gut zu sehen dass zusammenhÃ¤ngenden BlÃ¶cke in Python nicht durch Klammern, sondern durch EinrÃ¼ckungen strukturiert werden. Obwohl dies zu Beginn manchmal etwas gewÃ¶hnungsbedÃ¼rftig ist, gewÃ¶hnt man sich recht schnell daran."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "cf528d87",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Betrag(3.14)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "df6f744f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Betrag(-3.14)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "75151388",
+   "metadata": {},
+   "source": [
+    "NatÃ¼rlich gibt es die Betragsfunktion `abs` bereits in Python:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b9a07982",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "abs(-3.14)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "96961605",
+   "metadata": {},
+   "source": [
+    "## Kontrollstrukturen\n",
+    "\n",
+    "Wie in den meisten Programmiersprachen, gibt es auch in Python Kontrollstrukturen. Beispielsweise Schleifen die mit `for` aufgerufen werden:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c617cc2d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "for i in range(1,10):\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "efcd73e5",
+   "metadata": {},
+   "source": [
+    "Dabei haben wir den Iterator `range` verwendet. Der Aufruf range(1,10) lÃ¤uft also Ã¼ber die ganzen Zahlen von 1 bis 9 (Achtung der Endpunkt gehÃ¶rt **NICHT** dazu). Wichtig ist es auch die Doppelpunkte nicht zu vergessen."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "633340c6",
+   "metadata": {},
+   "source": [
+    "Bedingungen (hatten wir oben schon beim Betrag gesehen) werden mit `if` und `else` umgesetzt:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2261cf08",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "if 5 < 6:\n",
+    "    print(\"5 ist kleiner als 6\")\n",
+    "else:\n",
+    "    print(\"5 ist nicht kleiner als 6\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "16db57b4",
+   "metadata": {},
+   "source": [
+    "Es gibt noch eine weitere Art von Schleife in Python. Diese lÃ¤uft so lange eine Bedingung erfÃ¼llt ist"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "150624b5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "i = 1\n",
+    "while( i < 10 ):\n",
+    "    print(i)\n",
+    "    i = i + 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "727cf828",
+   "metadata": {},
+   "source": [
+    "## Mini-Visualisierung (Matplotlib)\n",
+    "Matplotlib ist eine sogenannte externe Bibliothek.\n",
+    "\n",
+    "<b>Definition</b>:<br> Eine Python-Library ist eine Sammlung von vorgefertigten Modulen und Funktionen, die bestimmte Aufgaben (z. B. Datenanalyse, Webentwicklung oder Visualisierung) erleichtert, ohne dass der Code selbst neu geschrieben werden muss.\n",
+    "\n",
+    "<b>Hinweis:</b> Jede Grafik erhÃ¤lt ihre eigene AusgabeflÃ¤che. Ã„ndere Zahlen und Titel und fÃ¼hre die Zelle erneut aus."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "af79cefa",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import matplotlib.pyplot as plt\n",
+    "\n",
+    "plt.plot([1, 3, 2, 4])\n",
+    "plt.title('Mein erstes Diagramm')\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3a7d6810",
+   "metadata": {},
+   "source": [
+    "Sollte die folgende Fehlermeldung erscheinen, so ist die Bibliothek vermutlich noch nicht installiert.\n",
+    "``` python\n",
+    "---------------------------------------------------------------------------\n",
+    "ModuleNotFoundError                       Traceback (most recent call last)\n",
+    "Cell In[26], line 1\n",
+    "----> 1 import matplotlib.pyplot as plt\n",
+    "      3 plt.plot([1, 3, 2, 4])\n",
+    "      4 plt.title('Mein erstes Diagramm')\n",
+    "\n",
+    "ModuleNotFoundError: No module named 'matplotlib'\n",
+    "```\n",
+    "\n",
+    "Um diese zu installieren mÃ¼ssen Sie ein Terminal Ã¶ffnen (cmd) und folgenden Befehl ausfÃ¼hren:\n",
+    "- ```pip install matplotlib``` <i>(fÃ¼r pip)</i>\n",
+    "- ```conda install -c conda-forge matplotlib``` <i>(fÃ¼r conda)</i>\n",
+    "\n",
+    "FÃ¼hren Sie die obere Zelle anschlieÃŸend nochmals aus, so sollte die Grafik erscheinen."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a45023df",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import matplotlib.pyplot as plt\n",
+    "\n",
+    "plt.plot([1, 2, 3], [2, 4, 6])\n",
+    "plt.title('Zweites Diagramm')\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2d1e3e5f",
+   "metadata": {},
+   "source": [
+    "## Interaktionen:\n",
+    "FÃ¼hre die Zelle aus und Ã¤ndere den Text."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "276f9d39",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "name = input(\"Wie heiÃŸt du? \")\n",
+    "print(f\"Hallo {name}, willkommen in der Welt von Python!\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bf225dbd",
+   "metadata": {},
+   "source": [
+    "## Umgang mit dem Terminal (CMD)\n",
+    "\n",
+    "Es gibt eine Reihe nÃ¼tzlicher cmd-Befehle, die Sie kennen sollten:\n",
+    "\n",
+    "<table>\n",
+    "  <thead>\n",
+    "    <tr>\n",
+    "      <th>Befehl</th>\n",
+    "      <th>Kurze ErklÃ¤rung</th>\n",
+    "    </tr>\n",
+    "  </thead>\n",
+    "  <tbody>\n",
+    "    <tr>\n",
+    "      <td>python --version</td>\n",
+    "      <td>Zeigt die installierte Python-Version an.</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>python script.py</td>\n",
+    "      <td>FÃ¼hrt eine Python-Datei aus.</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>python -m pip install paket</td>\n",
+    "      <td>Installiert ein Paket Ã¼ber pip (empfohlene Form, nutzt das zugehÃ¶rige Python).</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>pip list</td>\n",
+    "      <td>Listet installierte Pakete auf.</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>pip show paket</td>\n",
+    "      <td>Zeigt Details zu einem Paket (Version, Pfad, AbhÃ¤ngigkeiten).</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>pip freeze &gt; requirements.txt</td>\n",
+    "      <td>Schreibt exakte Paketversionen in eine Datei (fÃ¼r Reproduzierbarkeit).</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>python -m pip install --upgrade pip</td>\n",
+    "      <td>Aktualisiert pip auf die neueste Version.</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>pip install virtualenv <br> python -m virtualenv -p=[your_python_executable] [virtual_environment_name]</td>\n",
+    "      <td>Erstellt eine virtuelle Umgebung mit der Python Version <code>[your_python_executable]</code> mit dem namen <code>[virtual_environment_name]</code> im aktuellen Terminal Verzeichnis. <br> EnthÃ¤lt <code>[virtual_environment_name]</code> einen Pfad so wird die virtuelle Umgebung dort erstellt mit entsprechendem Namen </td>\n",
+    "    </tr>\n",
+    "        <tr>\n",
+    "      <td>python -m venv venv</td>\n",
+    "      <td>Erstellt eine virtuelle Umgebung im Ordner <code>venv</code>.</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>venv\\Scripts\\activate</td>\n",
+    "      <td>Aktiviert die virtuelle Umgebung (Windows CMD/PowerShell).</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>source venv/bin/activate</td>\n",
+    "      <td>Aktiviert die virtuelle Umgebung (macOS/Linux, Bash/Zsh).</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>deactivate</td>\n",
+    "      <td>Deaktiviert die aktuelle virtuelle Umgebung.</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>jupyter notebook</td>\n",
+    "      <td>Startet den Jupyter-Notebook-Server im Browser.</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>jupyter lab</td>\n",
+    "      <td>Startet JupyterLab (moderne OberflÃ¤che fÃ¼r Notebooks/Dateien/Terminals).</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>jupyter nbconvert --to html notebook.ipynb</td>\n",
+    "      <td>Konvertiert ein Notebook in HTML (auch PDF/Markdown mÃ¶glich).</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>jupyter kernelspec list</td>\n",
+    "      <td>Listet verfÃ¼gbare Jupyter-Kernel (z. B. Python, R, Julia).</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>ipython</td>\n",
+    "      <td>Startet eine interaktive Python-Konsole mit Komfortfunktionen.</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>where python</td>\n",
+    "      <td>Zeigt den Pfad zur Python-Installation (Windows).</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>which python</td>\n",
+    "      <td>Zeigt den Pfad zur Python-Installation (macOS/Linux).</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>conda create -n envname python=3.11</td>\n",
+    "      <td>Erstellt eine neue Conda-Umgebung mit bestimmter Python-Version.</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>conda activate envname</td>\n",
+    "      <td>Aktiviert eine Conda-Umgebung.</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>conda install paket</td>\n",
+    "      <td>Installiert Pakete in die aktive Conda-Umgebung.</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>conda env list</td>\n",
+    "      <td>Listet alle Conda-Umgebungen auf.</td>\n",
+    "    </tr>\n",
+    "    <tr>\n",
+    "      <td>conda deactivate</td>\n",
+    "      <td>Deaktiviert die aktive Conda-Umgebung.</td>\n",
+    "    </tr>\n",
+    "  </tbody>\n",
+    "</table>\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ca194fe2",
+   "metadata": {},
+   "source": [
+    "## Spielwiese fÃ¼r eigenen Code\n",
+    "\n",
+    "Probiere so die oben gezeigten Elemente selbststÃ¤ndig aus und versuchen Sie diese miteinander zu kombinieren.\n",
+    "\n",
+    "Sie sollten ein erstes GefÃ¼hl im Umgang mit Jupyter (Markdown, Code Zellen) und der Sprache Python bekommen. \n",
+    "\n",
+    "Im Verlauf der Vorlesung werden wir noch auf die einzelnen Sachen detaillierter Eingehen. Daher mÃ¼ssen Sie sich noch keine Sorgen machen, falls Sie noch nicht alles direkt verstanden haben.\n",
+    "\n",
+    "<b>Aufgabe:</b>\n",
+    "FÃ¼gen Sie mindestens eine Markdown, sowie eine Code-Zelle ein"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cc347dd0",
+   "metadata": {},
+   "source": [
+    "## Bonus Aufgabe:\n",
+    "Erstellen Sie eine Light-Version eines Taschenrechners:\n",
+    "- Input sollen 2 Zahlen sein\n",
+    "- Output der Zelle soll die Summe dieser beiden Zahlen sein\n",
+    "\n",
+    "Hinweis: Sie kÃ¶nnen diese Ausgabe mit den oben behandelten Code-AusdrÃ¼cken durch geschicktes zusammenfÃ¼gen lÃ¶sen."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "28b09f08",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": ".venv",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.11"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
